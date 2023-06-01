@@ -30,7 +30,7 @@ jobs:
                   docker push workshoptestcicd.azurecr.io/production:${{ github.sha }}
             - uses: azure/webapps-deploy@v2
               with:
-                  app-name: "backoffice-website"
+                  app-name: "workshopcicd"
                   images: "workshoptestcicd.azurecr.io/production:${{ github.sha }}"
 
             - name: Azure logout
